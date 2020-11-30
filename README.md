@@ -92,7 +92,9 @@ Balance game for final project
 
 לכן השחקן הפסיד ויופיעו המסכים הבאים:
 
-![](Images/theEnd2.png)
+<img src=https://github.com/Game-Dev-Project-D-A-Y/Ex3-Spaceship/blob/master/Images%20for%20github/partb1.jpg width="800"/>
+<img src= https://github.com/Game-Dev-Project-D-A-Y/OceanBalance/blob/main/Images/gamebalckhole.png width="800"/>
+![](Images/theEnd2.png )
 ![](Images/theEnd.png)
 
 
