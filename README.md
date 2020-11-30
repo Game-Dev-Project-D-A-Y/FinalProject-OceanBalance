@@ -158,18 +158,18 @@ Balance game for final project
 לחזק אצל השחקנים המשחקים את עניין איכות הסביבה ושמירה על האוקיינוס.
 
 ### King Of Opera
-<img src= https://github.com/Game-Dev-Project-D-A-Y/OceanBalance/blob/main/Images/theEnd2.png width="600" height="400"/>
+<img src= https://github.com/Game-Dev-Project-D-A-Y/OceanBalance/blob/main/Images/kingofopera.png width="400" height="200"/>
 
 זהו משחק של 4 שחקנים שמטרתם להפיל את היריבים אל מחוץ לגבולות המשטח , דומה לשלנו מסחינת המשטח והחוקים האסורים שהם אסור ליפול מהשטח ושונה בכל השאר
 
 ### BallBallance3D
-<img src= https://github.com/Game-Dev-Project-D-A-Y/OceanBalance/blob/main/Images/theEnd2.png width="600" height="400"/>
+<img src= https://github.com/Game-Dev-Project-D-A-Y/OceanBalance/blob/main/Images/ballballance3d.png width="300" height="150"/>
 
 זהו משחק של שחקן יחיד שבו הוא מוביל כדור לאורך מסלולים שונים ומטרתו לא להפיל את הכדור
 דומה לשלנו מבחינת מטרת המשחק לא להפיל את הכדור ושונה בכל השאר מבחינת הצורה של המשחק הדרך לשחק ושיטת הניקוד
 
 ### other games like Ball Ballance
-<img src= https://github.com/Game-Dev-Project-D-A-Y/OceanBalance/blob/main/Images/theEnd2.png width="600" height="400"/>
+<img src= https://github.com/Game-Dev-Project-D-A-Y/OceanBalance/blob/main/Images/listlikeourgame.png width="130" height="300"/>
 
 
 
