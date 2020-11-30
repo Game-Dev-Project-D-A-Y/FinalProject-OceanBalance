@@ -48,11 +48,9 @@ Balance game for final project
 ### מסך הפתיחה
 
 #### כפי שניתן לראות במסך זה מוצג שם המשחק וכפתור "התחלה" שבלחיצה עליו נעבור למסך הבא
-![](Images/openScreen.png)
+<img src= https://github.com/Game-Dev-Project-D-A-Y/OceanBalance/blob/main/Images/openScreen.png width="600" height="400"/>
 
-
-
-![](Images/openScreenafterstart.png)
+<img src= https://github.com/Game-Dev-Project-D-A-Y/OceanBalance/blob/main/Images/openScreenafterstart.png width="600" height="400"/>
 
 לאחר לחיצה על כפתור "התחלה" יפתח מסך נוסף עם 3 כפתורים 
 * טעינת המשחק
@@ -61,7 +59,7 @@ Balance game for final project
 
 
 ### המשחק עצמו:
-![](Images/thegame.png)
+<img src= https://github.com/Game-Dev-Project-D-A-Y/OceanBalance/blob/main/Images/thegame.png width="600" height="400"/>
 
 
 ### מה לעשות כדי לשחק ?
@@ -70,13 +68,14 @@ Balance game for final project
 לאחר התחלת המשחק יעלמו החיצים ותיחילו להופיע "עצמי הפלסטיק" שאותם השחקן ינסה לאסוף .
 בנוסף מימד הזמן יתחיל ברגע שילחץ על אחד החיצים.
 
-![](Images/thegame2.png)
+<img src= https://github.com/Game-Dev-Project-D-A-Y/OceanBalance/blob/main/Images/thegame2.png width="600" height="400"/>
 
 כפי שניתן לראות המשטח בהטייה כלומר השחקן התחיל במשחק ומנסה לשמור את הכדור על המשטח. כמו כן ניתן לראות את בקבוק הפלסטיק 
 ושהשחקן מנסה להגיע אליו ולאסוף אותו.
   
-### לאחר אי אסיפת פריט פלסטיק   
-![](Images/gamebalckhole.png)
+### לאחר אי אסיפת פריט פלסטיק  
+<img src= https://github.com/Game-Dev-Project-D-A-Y/OceanBalance/blob/main/Images/gamebalckhole.png width="600" height="400"/>
+
 
 השחקן לא מצליח לקחת את הבקבוק ובמקומו מופיע "חור שחור" שבמקרה והכדור יפול אליו השחקן ייפסל. 
 
@@ -92,11 +91,8 @@ Balance game for final project
 
 לכן השחקן הפסיד ויופיעו המסכים הבאים:
 
-<img src=https://github.com/Game-Dev-Project-D-A-Y/Ex3-Spaceship/blob/master/Images%20for%20github/partb1.jpg width="800"/>
-<img src= https://github.com/Game-Dev-Project-D-A-Y/OceanBalance/blob/main/Images/gamebalckhole.png width="800"/>
-![](Images/theEnd2.png )
-![](Images/theEnd.png)
-
+<img src= https://github.com/Game-Dev-Project-D-A-Y/OceanBalance/blob/main/Images/theEnd2.png width="600" height="400"/>
+<img src= https://github.com/Game-Dev-Project-D-A-Y/OceanBalance/blob/main/Images/theEnd.png width="600" height="400"/>
 
 
 ### העצמים במשחק:
