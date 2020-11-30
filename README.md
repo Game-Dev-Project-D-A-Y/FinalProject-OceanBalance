@@ -52,6 +52,29 @@ A game that test your bakance ability.
 
 הוסיפו תרשימים הממחישים את התהליכים השונים.
 
+מסך הפתיחה
+![](Images/openScreen.png)
+
+לאחר מכן
+![](Images/openScreenafterstart.png)
+
+המשחק עצמו
+![](Images/thegame.png)
+![](Images/thegame2.png)
+
+לאחר אי אסיפת "פריט פלסטיק"
+![](Images/gamebalckhole.png)
+
+סיום המשחק
+![](Images/theEnd2.png)
+![](Images/theEnd.png)
+
+
+
+
+
+
+
 3. מה העצמים?
 מה הם האובייקטים במשחק ומה הם עושים? האם כל אחד מהאובייקטים הוא:
 
