@@ -33,10 +33,19 @@ public class CharacterKeyBoardMover: MonoBehaviour {
 
         }
         // Click Up: velocity = (0,0,1)
-        if(transform.rotation.eulerAngles.x >= angle){
-            transform.localRotation = Quaternion.Euler(angle, 0, 0);
-;
+        if(transform.rotation.eulerAngles.x >= angle ){
+            transform.localRotation = Quaternion.Euler(angle, 0, transform.localRotation.z);
         }
+        if(transform.rotation.eulerAngles.z >= angle ){
+            transform.localRotation = Quaternion.Euler(transform.localRotation.x, 0, angle);
+        }
+        if(transform.rotation.eulerAngles.x >= angleeu ){
+            transform.localRotation = Quaternion.Euler(angle, 0, transform.localRotation.z);
+        }
+        if(transform.rotation.eulerAngles.z >= angle ){
+            transform.localRotation = Quaternion.Euler(transform.localRotation.x, 0, angle);
+        }
+        
             Debug.Log("transform.localRotation.x " + transform.localRotation.eulerAngles );
             transform.Rotate(velocity , Space.Self);
         //Debug.Log("velocity="+velocity+" isGrounded="+ _cc.isGrounded);
