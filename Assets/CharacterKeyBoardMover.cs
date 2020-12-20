@@ -10,7 +10,7 @@ public class CharacterKeyBoardMover: MonoBehaviour {
     [Tooltip("Speed of player keyboard-movement, in meters/second")]
     [SerializeField] float _speed = 3.5f;
     [SerializeField] float _gravity = 9.81f;
-    [SerializeField] float angle = 45f;
+    [SerializeField] float angle = 20;
      [SerializeField] float eulerAngleMax = 360;
 
 
@@ -32,26 +32,43 @@ public class CharacterKeyBoardMover: MonoBehaviour {
             velocity.z -= _gravity*Time.deltaTime;
 
         }
-        // Click Up: velocity = (0,0,1)
-        if(transform.rotation.eulerAngles.x >= angle ){
-            transform.localRotation = Quaternion.Euler(angle, 0, transform.localRotation.z);
-        }
-        if(transform.rotation.eulerAngles.z >= angle ){
-            transform.localRotation = Quaternion.Euler(transform.localRotation.x, 0, angle);
-        }
-        if(transform.rotation.eulerAngles.x >= angleeu ){
-            transform.localRotation = Quaternion.Euler(angle, 0, transform.localRotation.z);
-        }
-        if(transform.rotation.eulerAngles.z >= angle ){
-            transform.localRotation = Quaternion.Euler(transform.localRotation.x, 0, angle);
-        }
-        
-            Debug.Log("transform.localRotation.x " + transform.localRotation.eulerAngles );
-            transform.Rotate(velocity , Space.Self);
-        //Debug.Log("velocity="+velocity+" isGrounded="+ _cc.isGrounded);
-        _cc.Move(velocity * Time.deltaTime);
+        Vector3 localRot;
+       // Click Up: velocity = (0,0,1);
+       if((transform.localEulerAngles.x >=angle && transform.localEulerAngles.x <=(2*angle)) && 
+          (transform.localEulerAngles.z >= angle && transform.localEulerAngles.z <= (2*angle))){
+                               transform.localEulerAngles = new Vector3(angle,0,angle);
+                               //Debug.Log("1");
+       }
+       if( (transform.localEulerAngles.x <= eulerAngleMax-angle && transform.localEulerAngles.x >= eulerAngleMax-(2*angle)) &&
+          (transform.localEulerAngles.z <= eulerAngleMax-angle && transform.localEulerAngles.z >= eulerAngleMax-(2*angle))){
+                transform.localEulerAngles = new Vector3(eulerAngleMax-angle,0, eulerAngleMax-angle);
+                                               //Debug.Log("2");
+
+       }
+       if(transform.localEulerAngles.x >=angle && transform.localEulerAngles.x <=(2*angle)){
+                    transform.localEulerAngles = new Vector3(angle,0,transform.localEulerAngles.z);
+                                                                  // Debug.Log("3");
+
+       }
+        if(transform.localEulerAngles.x <= eulerAngleMax-angle && transform.localEulerAngles.x >=eulerAngleMax-(2*angle) ){
+                    transform.localEulerAngles = new Vector3(eulerAngleMax-angle,0,transform.localEulerAngles.z);
+                                                                                    // Debug.Log("4");
+  
+       }
+        if(transform.localEulerAngles.z > angle && transform.localEulerAngles.z <= (2*angle)){
+                    transform.localEulerAngles = new Vector3(transform.localEulerAngles.x,0,angle);
+                                                                                       Debug.Log("5");
+
+       }
+        if(transform.localEulerAngles.z <=eulerAngleMax-angle && transform.localEulerAngles.z >= eulerAngleMax-(2*angle)){
+                    transform.localEulerAngles = new Vector3(transform.localEulerAngles.x,0,eulerAngleMax-angle);
+                                                                                     //  Debug.Log("6");
+
+       }
+
+        transform.Rotate(velocity , Space.Self);
+
       
     }
 }
 
-//transform.rotation.eulerAngles.x <= angle || transform.rotation.eulerAngles.x >= eulerAngleMax - angle) && (transform.rotation.eulerAngles.z <= angle || transform.rotation.eulerAngles.z >= eulerAngleMax - angle)
