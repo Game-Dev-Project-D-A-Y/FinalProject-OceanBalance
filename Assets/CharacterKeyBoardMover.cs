@@ -22,8 +22,8 @@ public class CharacterKeyBoardMover: MonoBehaviour {
     Vector3 velocity;
 
     void Update()  {
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
+        float x = Input.GetAxis("Vertical"); 
+        float z = -Input.GetAxis("Horizontal");
         //if (x == 0 && z == 0) return;
         velocity.x = x * _speed;
         velocity.z = z * _speed;
