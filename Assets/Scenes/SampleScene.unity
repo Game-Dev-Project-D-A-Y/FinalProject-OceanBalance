@@ -515,10 +515,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10faf0f8f70f8a5488bc646e987d32f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 0.5
+  _speed: 1
   _gravity: 0
   angle: 20
-  eulerAngleMax: 360
 --- !u!143 &974648199
 CharacterController:
   m_ObjectHideFlags: 0
