@@ -485,6 +485,7 @@ GameObject:
   - component: {fileID: 962730865}
   - component: {fileID: 962730866}
   - component: {fileID: 962730869}
+  - component: {fileID: 962730870}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -582,6 +583,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &962730870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 962730864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 979907165cad68848b53952b7ffa2b77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gm: {fileID: 1094938810}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -820,8 +834,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72316b5b35aa69a40a3ccf95fea84765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameScore: 0
-  bottleTime: 0
+  gameScore: {fileID: 0}
+  bottleTime: {fileID: 0}
   scoreToreduceTimeBottle: 0
   levelScoreToAdd: 0
   prefabToSpawn: {fileID: 1545199484939113027, guid: 5750660da7118bb4aba675bb1e20dd51,
@@ -1209,8 +1223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d464d78511427e438d547b3c407aea8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeRemaining: 0
-  textField: {fileID: 0}
+  BottleTime: 0
 --- !u!1 &884824675856129809 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1545199484939113027, guid: 5750660da7118bb4aba675bb1e20dd51,
@@ -1224,7 +1237,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 884824675856129809}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 143fd7db39e99aa4f945ff82c929f393, type: 3}
   m_Name: 
@@ -1239,7 +1252,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 884824675856129809}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ee014eeb46be14f44a6ffc714c1f8b47, type: 3}
   m_Name: 
@@ -1254,7 +1267,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 884824675856129809}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fca95af1f6bae63498255374388a31c7, type: 3}
   m_Name: 
@@ -1277,17 +1290,17 @@ PrefabInstance:
     - target: {fileID: 2178183190481062137, guid: 5750660da7118bb4aba675bb1e20dd51,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.1366696
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2178183190481062137, guid: 5750660da7118bb4aba675bb1e20dd51,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.1481516
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2178183190481062137, guid: 5750660da7118bb4aba675bb1e20dd51,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 14.790553
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2178183190481062137, guid: 5750660da7118bb4aba675bb1e20dd51,
         type: 3}
