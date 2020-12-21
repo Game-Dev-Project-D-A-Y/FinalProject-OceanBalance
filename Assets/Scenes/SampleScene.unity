@@ -561,6 +561,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72316b5b35aa69a40a3ccf95fea84765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameScore: 0
+  bottleTime: 0
+  scoreToreduceTimeBottle: 0
+  levelScoreToAdd: 0
+  prefabToSpawn: {fileID: 1545199484939113027, guid: 5750660da7118bb4aba675bb1e20dd51,
+    type: 3}
+  baseObject: {fileID: 974648193}
+  minTimeToCollectBottle: 0
 --- !u!4 &1094938811
 Transform:
   m_ObjectHideFlags: 0
