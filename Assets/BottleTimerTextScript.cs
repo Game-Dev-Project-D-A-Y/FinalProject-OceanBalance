@@ -9,7 +9,7 @@ using UnityEngine;
 public class BottleTimerTextScript : MonoBehaviour
 {
     [Tooltip("Timer of Bottle until they disepear")]
-    [SerializeField] float BottleTime;
+    [SerializeField] int BottleTime;
     private TextMeshPro textField;
     // Start is called before the first frame update
     void Start()
@@ -18,8 +18,7 @@ public class BottleTimerTextScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
+ 
         public int GetBottleTime()
         {
             return this.BottleTime;
@@ -30,5 +29,5 @@ public class BottleTimerTextScript : MonoBehaviour
             this.BottleTime = newBottleTime;
             this.textField.text = newBottleTime.ToString();
         }
-    }
+    
 }

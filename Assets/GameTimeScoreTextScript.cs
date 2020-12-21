@@ -8,7 +8,7 @@ using TMPro;
 public class GameTimeScoreTextScript : MonoBehaviour
 {
     [Tooltip("Time which represents the score")]
-    [SerializeField] float timeOnBase;
+    [SerializeField] int timeOnBase;
     private TextMeshPro textField;
     // Start is called before the first frame update
     void Start()

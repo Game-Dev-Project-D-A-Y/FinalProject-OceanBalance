@@ -10,7 +10,6 @@ using UnityEngine;
 [RequireComponent(typeof(TextMeshPro))]
 public class BottelsCollectedTextScript : MonoBehaviour
 {
-
     private TextMeshPro textField;
     private int BottelsCollected;
 
@@ -19,12 +18,12 @@ public class BottelsCollectedTextScript : MonoBehaviour
         textField = GetComponent<TextMeshPro>();
     }
 
-    public int GetSBottelsCollected()
+    public int GetBottelsCollected()
     {
         return this.BottelsCollected;
     }
 
-    public void SetBottelsCollectede(int newBottelsCollected)
+    public void SetBottelsCollected(int newBottelsCollected)
     {
         this.BottelsCollected = newBottelsCollected;
         this.textField.text = newBottelsCollected.ToString();
