@@ -4,7 +4,6 @@ using UnityEngine;
 /**
  * This component moves a player controlled with a CharacterController using the keyboard.
  */
-[RequireComponent(typeof (CharacterController))]
 public class CharacterKeyBoardMover : MonoBehaviour
 {
     [Tooltip("Speed of player keyboard-movement, in meters/second")]
