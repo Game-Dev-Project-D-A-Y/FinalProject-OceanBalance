@@ -33,7 +33,6 @@ public class GameManager : MonoBehaviour
         
     }
 
-
     public void StartBottleNewTime()
     {
         // object that response on bottle time Dovie
@@ -69,6 +68,11 @@ public class GameManager : MonoBehaviour
         randomPosition = new Vector3(Random.Range(baseSize.localScale.x, baseSize.localScale.z), 0, Random.Range(baseSize.localScale.x, baseSize.localScale.z));
         GameObject newObject = Instantiate(prefabToSpawn.gameObject, randomPosition, Quaternion.identity, baseObject.transform);
         
+
+    public void OnBottlePicked(GameObject bottle)
+    {
+        Destroy(bottle);
+        Debug.Log("OnBottlePicked");
     }
 }
 
