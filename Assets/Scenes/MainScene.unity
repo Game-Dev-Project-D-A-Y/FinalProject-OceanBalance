@@ -874,8 +874,7 @@ MonoBehaviour:
   bottleTimerTxt: {fileID: 1817329866}
   BottelsCollectedTxt: {fileID: 307435858}
   scoreToReduceTimeBottle: 0
-  levelScoreToAdd: 0
-  minTimeToCollectBottle: 10
+  maxTimeToCollectBottle: 10
 --- !u!4 &1094938811
 Transform:
   m_ObjectHideFlags: 0

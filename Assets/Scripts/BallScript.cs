@@ -2,15 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+*   Script that handles ball triggers
+*/
 public class BallScript : MonoBehaviour
 {
+    [Tooltip("Reference to the GameManager")]
     [SerializeField] GameManager gm;
 
-    void Start()
-    {
-
-    }
-    
     public void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Bottle")) 
