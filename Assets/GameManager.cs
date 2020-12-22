@@ -66,7 +66,9 @@ public class GameManager : MonoBehaviour
             minTimeToCollectBottle -= 1;
             scoreToreduceTimeBottle *= 2;
         }
-      }
+        timeLeftToCollectBottle = minTimeToCollectBottle;
+
+    }
 
     public void BottleTime()
     {
