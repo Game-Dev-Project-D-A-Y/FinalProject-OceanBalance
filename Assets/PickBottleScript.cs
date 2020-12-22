@@ -11,5 +11,9 @@ public class PickBottleScript : MonoBehaviour
         if(other.CompareTag("Bottle")) {
             gm.OnBottlePicked(other.gameObject);
         }
+        if (other.CompareTag("BottomBorder"))
+        {
+            gm.OnBorderHit(this.gameObject);
+        }
     }
 }

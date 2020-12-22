@@ -6,11 +6,18 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     [SerializeField]
-    TextMeshPro gameScore; // object that response on score Dovie
+    TextMeshPro gameTimeScoreTxt; // object that response on score Dovie
+    [SerializeField] 
+    float timeGained; //
+    bool isActive = true;
 
     [SerializeField]
-    TextMeshPro bottleTime; // object that response on bottle time Dovie
+    TextMeshPro bottleTimerTxt; // object that response on bottle time Dovie
 
+    [SerializeField]
+    TextMeshPro BottelsCollectedTxt; // object that response on bottle time Dovie
+
+    int bottelsCollected = -1;   // -1 because in the start of the game the bottle fallls on the ball! please fix alon de loco! ******************************
     [SerializeField]
     int scoreToreduceTimeBottle; // check score and update time
 
@@ -25,26 +32,54 @@ public class GameManager : MonoBehaviour
     GameObject baseObject;
 
     [SerializeField]
-    int minTimeToCollectBottle;
+    float minTimeToCollectBottle;
+    float timeLeftToCollectBottle;
 
     // Start is called before the first frame update
     void Start()
     {
+        timeLeftToCollectBottle = minTimeToCollectBottle;
     }
 
     // Update is called once per frame
     void Update()
     {
+        UpdateGameTime();
+        BottleTime();
+
+
     }
 
-    public void StartBottleNewTime()
+    public void UpdateGameTime()  //update time of game
     {
-        // object that response on bottle time Dovie
+        if (isActive)   
+        {
+            timeGained += Time.deltaTime;
+            gameTimeScoreTxt.SetText("Time: {0}", timeGained);
+        }
     }
 
-    public void CheckAndUpdateBottleTime()
+      public void CheckAndUpdateBottleTime()
+      {
+          if (bottelsCollected >= scoreToreduceTimeBottle && minTimeToCollectBottle >= 4)
+        {
+            minTimeToCollectBottle -= 1;
+            scoreToreduceTimeBottle *= 2;
+        }
+      }
+
+    public void BottleTime()
     {
-        // TODO
+        timeLeftToCollectBottle -= Time.deltaTime;
+        bottleTimerTxt.SetText("Bottle Timer: {0}", timeLeftToCollectBottle);
+        if (timeLeftToCollectBottle <= 0)
+        {
+            timeLeftToCollectBottle = minTimeToCollectBottle;
+            //bottleToDestroy = bottleToDestroy.FindWithTag("Bottle");
+            Destroy (GameObject.Find("Bottle(Clone)"));
+            BottleSpawnerOnCollision();
+        }
+
     }
     private static float num = 1;
     public void BottleSpawnerOnCollision()
@@ -79,6 +114,15 @@ public class GameManager : MonoBehaviour
     {
         BottleSpawnerOnCollision();
         Destroy (bottle);
+        bottelsCollected += 1;
+        BottelsCollectedTxt.SetText("Bottles: " + bottelsCollected);
+        CheckAndUpdateBottleTime();
         Debug.Log("OnBottlePicked");
+    }
+    public void OnBorderHit(GameObject ball)
+    {
+        Destroy(ball);
+        isActive = false;
+        Debug.Log("OnBorderHit");
     }
 }

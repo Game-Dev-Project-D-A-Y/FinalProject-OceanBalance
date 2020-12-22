@@ -26,7 +26,7 @@ public class BottleTimerTextScript : MonoBehaviour
 
         public void SetBottleTime(int newBottleTime)
         {
-            this.BottleTime = newBottleTime;
+            this.BottleTime += newBottleTime;
             this.textField.text = newBottleTime.ToString();
         }
     
