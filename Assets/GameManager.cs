@@ -7,8 +7,10 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField]
     TextMeshPro gameTimeScoreTxt; // object that response on score Dovie
-    [SerializeField] 
+
+    [SerializeField]
     float timeGained; //
+
     bool isActive = true;
 
     [SerializeField]
@@ -17,7 +19,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     TextMeshPro BottelsCollectedTxt; // object that response on bottle time Dovie
 
-    int bottelsCollected = -1;   // -1 because in the start of the game the bottle fallls on the ball! please fix alon de loco! ******************************
+    private int bottelsCollected = 0; // -1 because in the start of the game the bottle fallls on the ball! please fix alon de loco! ******************************
+
     [SerializeField]
     int scoreToreduceTimeBottle; // check score and update time
 
@@ -33,6 +36,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     float minTimeToCollectBottle;
+
     float timeLeftToCollectBottle;
 
     // Start is called before the first frame update
@@ -44,30 +48,32 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!isActive) return;
+
         UpdateGameTime();
         BottleTime();
-
-
     }
 
-    public void UpdateGameTime()  //update time of game
+    public void UpdateGameTime() //update time of game
     {
-        if (isActive)   
+        if (isActive)
         {
             timeGained += Time.deltaTime;
             gameTimeScoreTxt.SetText("Time: {0}", timeGained);
         }
     }
 
-      public void CheckAndUpdateBottleTime()
-      {
-          if (bottelsCollected >= scoreToreduceTimeBottle && minTimeToCollectBottle >= 4)
+    public void CheckAndUpdateBottleTime()
+    {
+        if (
+            bottelsCollected >= scoreToreduceTimeBottle &&
+            minTimeToCollectBottle >= 4
+        )
         {
             minTimeToCollectBottle -= 1;
             scoreToreduceTimeBottle *= 2;
         }
         timeLeftToCollectBottle = minTimeToCollectBottle;
-
     }
 
     public void BottleTime()
@@ -77,53 +83,42 @@ public class GameManager : MonoBehaviour
         if (timeLeftToCollectBottle <= 0)
         {
             timeLeftToCollectBottle = minTimeToCollectBottle;
-            //bottleToDestroy = bottleToDestroy.FindWithTag("Bottle");
-            Destroy (GameObject.Find("Bottle(Clone)"));
-            BottleSpawnerOnCollision();
-        }
 
+            //bottleToDestroy = bottleToDestroy.FindWithTag("Bottle");
+            Destroy(GameObject.Find("Bottle(Clone)"));
+            SpawnBottle();
+        }
     }
-    private static float num = 1;
-    public void BottleSpawnerOnCollision()
+
+    public void SpawnBottle()
     {
-        Debug.Log("BottleSpawnerOnCollision");
+        Debug.Log("SpawnBottle");
 
         float scaleX = baseObject.transform.localScale.x / 2f;
         float scaleZ = baseObject.transform.localScale.z / 2f;
-        float randomX = Random.Range(-scaleX,scaleX);
-        float randomZ = Random.Range(-scaleZ,scaleZ);
-        Vector3 randomPosition = new Vector3(randomX,0,randomZ);
+        float randomX = Random.Range(-scaleX, scaleX);
+        float randomZ = Random.Range(-scaleZ, scaleZ);
+        Vector3 randomPosition = new Vector3(randomX, 0, randomZ);
 
         GameObject newObject = Instantiate(prefabToSpawn.gameObject, randomPosition, baseObject.transform.localRotation);
         newObject.transform.parent = baseObject.transform;
-        newObject.transform.localPosition = new Vector3(newObject.transform.localPosition.x,0,newObject.transform.localPosition.z);
-    }
-
-    public void BottleSpawnerOnTimeOut()
-    {
-                Debug.Log("BottleSpawnerOnTimeOut");
-        Vector3 randomPosition =
-            new Vector3(Random.Range(-10.0f, 10.0f),
-                0,
-                Random.Range(-10.0f, 10.0f));
-        GameObject newObject =
-            Instantiate(prefabToSpawn.gameObject,
-            randomPosition,
-            Quaternion.identity);
+        newObject.transform.localPosition = new Vector3(newObject.transform.localPosition.x, 0, newObject.transform.localPosition.z);
     }
 
     public void OnBottlePicked(GameObject bottle)
     {
-        BottleSpawnerOnCollision();
+        Debug.Log("OnBottlePicked");
+        SpawnBottle();
         Destroy (bottle);
         bottelsCollected += 1;
+        Debug.Log("bottelsCollected:" + bottelsCollected);
         BottelsCollectedTxt.SetText("Bottles: " + bottelsCollected);
         CheckAndUpdateBottleTime();
-        Debug.Log("OnBottlePicked");
     }
+
     public void OnBorderHit(GameObject ball)
     {
-        Destroy(ball);
+        Destroy (ball);
         isActive = false;
         Debug.Log("OnBorderHit");
     }
