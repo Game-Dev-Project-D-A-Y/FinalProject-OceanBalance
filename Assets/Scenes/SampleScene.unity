@@ -866,15 +866,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72316b5b35aa69a40a3ccf95fea84765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  baseObject: {fileID: 974648193}
+  bottleToSpawn: {fileID: 1545199484939113027, guid: 5750660da7118bb4aba675bb1e20dd51,
+    type: 3}
+  blackHoleToSpawn: {fileID: 4679355589795168733, guid: 938817ed33c3d4f439f40836ec2d6836,
+    type: 3}
   gameTimeScoreTxt: {fileID: 1518890797}
-  timeGained: 0
   bottleTimerTxt: {fileID: 1817329866}
   BottelsCollectedTxt: {fileID: 307435858}
-  scoreToreduceTimeBottle: 10
+  scoreToReduceTimeBottle: 0
   levelScoreToAdd: 0
-  prefabToSpawn: {fileID: 1545199484939113027, guid: 5750660da7118bb4aba675bb1e20dd51,
-    type: 3}
-  baseObject: {fileID: 974648193}
   minTimeToCollectBottle: 10
 --- !u!4 &1094938811
 Transform:
