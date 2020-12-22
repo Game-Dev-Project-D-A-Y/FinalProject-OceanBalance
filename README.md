@@ -3,8 +3,10 @@
 Balance game for final project
 
 # OceanBalance
-[PLAY ON ITCH.IO](https://game-dev-project-d-a-y.itch.io/ocean-balance) 
+# [PLAY ON ITCH.IO](https://game-dev-project-d-a-y.itch.io/ocean-balance) 
 #### A game that test your balance ability .
+
+שמנהלת את המשחק יש הערות בקוד לגבי כל התפעול שלו  [GAMEMANAGER](https://github.com/Game-Dev-Project-D-A-Y/OceanBalance/blob/main/Assets/GameManager.cs) החלטנו במשחק הזה לרכז את עיקר המשחק בסקריפט
 
 
 ### נאום מעלית
