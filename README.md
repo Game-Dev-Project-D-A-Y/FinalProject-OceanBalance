@@ -18,10 +18,10 @@
 
 ### GameManager
 In our project we created a [GameManager script](https://github.com/Game-Dev-Project-D-A-Y/OceanBalance/blob/main/Assets/GameManager.cs) which through it we control the game.
-The pointes, timer and amount of bottles collected are also controlled in this script.
+The pointes, timer and amount of bottles collected are also controlled in this script and all of three have the Text Mesh Pro component.
 
 ### Design    
-To deisgn the sea under the base, we used a Shader. If you are no fammiliar with the unity Shader you may watch this video on YouTube: [Water Shader](https://www.youtube.com/watch?v=Vg0L9aCRWPE&t=302s).   
+To deisgn the sea under the base, we used a Shader. If you are no fammiliar with the unity Shader you may watch this video on [YouTube: Water Shader](https://www.youtube.com/watch?v=Vg0L9aCRWPE&t=302s).   
 
 <img src= https://github.com/Game-Dev-Project-D-A-Y/OceanBalance/blob/main/Images/sea.jpg width="150"/>
 
