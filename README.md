@@ -4,10 +4,15 @@
      
 ### [PLAY ON ITCH.IO](https://game-dev-project-d-a-y.itch.io/ocean-balance) 
     
-### Elements in the game   
-**Ball** - Has a RigidBody component which allows it to roll around the surface and a [BallScript script](https://github.com/Game-Dev-Project-D-A-Y/OceanBalance/blob/main/Assets/Scripts/BallScript.cs) which sends to the GameManager commands as soon as it colides with a bottle/whole/border.
+### Main Elements in the game  
+<img src= https://github.com/Game-Dev-Project-D-A-Y/OceanBalance/blob/main/base.jpg width="50" height="50"/>
+   
+   
+**Ball** - Has a RigidBody component which allows it to roll around the surface and a [BallScript script](https://github.com/Game-Dev-Project-D-A-Y/OceanBalance/blob/main/Assets/Scripts/BallScript.cs) which sends to the GameManager commands as soon as it colides with a bottle/whole/border.   
+ 
 **Base** - The surface of the game we controoled by the [Mover Script](https://github.com/Game-Dev-Project-D-A-Y/OceanBalance/blob/main/Assets/Scripts/Mover.cs)
-In our project we created a [GameManager script](https://github.com/Game-Dev-Project-D-A-Y/OceanBalance/blob/main/Assets/GameManager.cs) which through it we control the game.   
+In our project we created a [GameManager script](https://github.com/Game-Dev-Project-D-A-Y/OceanBalance/blob/main/Assets/GameManager.cs) which through it we control the game.
+    
 **Bottle** - Every N seconds it appears on the surface and disappears when the ball coliides with it or when it times out (every bottle has a few seconds to be touched and when a player does not make it, a **black hole** appears instead of the bottle and the player should **Not** touch the hole with the ball.   
 
  
