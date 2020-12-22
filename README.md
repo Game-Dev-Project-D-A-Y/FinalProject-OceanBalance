@@ -8,7 +8,7 @@
 ## About the Devlopment of our Game:     
 
 ### Main Elements of the game  
-<img src= https://github.com/Game-Dev-Project-D-A-Y/OceanBalance/blob/main/base.jpg width="200" height="200"/>
+<img src= https://github.com/Game-Dev-Project-D-A-Y/OceanBalance/blob/main/base.jpg width="400" height="200"/>
    
 **Ball** - Has a RigidBody component which allows it to roll around the surface and a [BallScript script](https://github.com/Game-Dev-Project-D-A-Y/OceanBalance/blob/main/Assets/Scripts/BallScript.cs) which sends to the GameManager commands as soon as it colides with a bottle/whole/border.   
  
@@ -23,7 +23,7 @@ The pointes, timer and amount of bottles collected are also controlled in this s
 ### Design    
 To deisgn the sea under the base, we used a Shader. If you are no fammiliar with the unity Shader you may watch this video on [YouTube: Water Shader](https://www.youtube.com/watch?v=Vg0L9aCRWPE&t=302s).   
 
-<img src= https://github.com/Game-Dev-Project-D-A-Y/OceanBalance/blob/main/Images/sea.jpg width="150"/>
+<img src= https://github.com/Game-Dev-Project-D-A-Y/OceanBalance/blob/main/Images/sea.jpg width="300" height="150"/>
 
  
 <div dir="rtl">    
