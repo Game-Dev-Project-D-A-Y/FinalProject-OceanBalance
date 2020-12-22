@@ -6,12 +6,16 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     [SerializeField]
-    TextMeshPro gameTimeScoreTxt; // object that response on score Dovie
+    GameObject baseObject;
 
     [SerializeField]
-    float timeGained; //
+    GameObject bottleToSpawn;
 
-    bool isActive = true;
+    [SerializeField]
+    GameObject blackHoleToSpawn;
+
+    [SerializeField]
+    TextMeshPro gameTimeScoreTxt; // object that response on score Dovie
 
     [SerializeField]
     TextMeshPro bottleTimerTxt; // object that response on bottle time Dovie
@@ -19,28 +23,22 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     TextMeshPro BottelsCollectedTxt; // object that response on bottle time Dovie
 
-    private int bottelsCollected = 0; // -1 because in the start of the game the bottle fallls on the ball! please fix alon de loco! ******************************
-
     [SerializeField]
-    int scoreToreduceTimeBottle; // check score and update time
+    int scoreToReduceTimeBottle; // check score and update time
 
     [SerializeField]
     int levelScoreToAdd; // check score and update time
-
-    // yishay
-    [SerializeField]
-    GameObject prefabToSpawn;
-
-    [SerializeField]
-    GameObject blackHoleToSpawn;
-
-    [SerializeField]
-    GameObject baseObject;
 
     [SerializeField]
     float minTimeToCollectBottle;
 
     float timeLeftToCollectBottle;
+
+    private float timeGained; 
+
+    private bool isActive = true;
+
+    private int bottelsCollected = 0; 
 
     // Start is called before the first frame update
     void Start()
@@ -96,12 +94,12 @@ public class GameManager : MonoBehaviour
     private void CheckAndUpdateBottleTime()
     {
         if (
-            bottelsCollected >= scoreToreduceTimeBottle &&
+            bottelsCollected >= scoreToReduceTimeBottle &&
             minTimeToCollectBottle >= 4
         )
         {
             minTimeToCollectBottle -= 1;
-            scoreToreduceTimeBottle *= 2;
+            scoreToReduceTimeBottle *= 2;
         }
         timeLeftToCollectBottle = minTimeToCollectBottle;
     }
@@ -137,7 +135,7 @@ public class GameManager : MonoBehaviour
         float randomZ = Random.Range(-scaleZ, scaleZ);
         Vector3 randomPosition = new Vector3(randomX, 0, randomZ);
 
-        GameObject newObject = Instantiate(prefabToSpawn.gameObject, randomPosition, baseObject.transform.localRotation);
+        GameObject newObject = Instantiate(bottleToSpawn.gameObject, randomPosition, baseObject.transform.localRotation);
         newObject.transform.parent = baseObject.transform;
         newObject.transform.localPosition = new Vector3(newObject.transform.localPosition.x, 0, newObject.transform.localPosition.z);
     }
