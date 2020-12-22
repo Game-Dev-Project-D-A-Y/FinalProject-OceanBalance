@@ -96,7 +96,7 @@ public class GameManager : MonoBehaviour
     {
         if (
             bottelsCollected >= scoreToReduceTimeBottle &&
-            minTimeToCollectBottle >= 4
+            minTimeToCollectBottle >= 5
         )
         {
             minTimeToCollectBottle -= 1;
