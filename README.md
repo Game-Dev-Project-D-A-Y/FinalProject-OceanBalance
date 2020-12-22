@@ -3,7 +3,7 @@
 Balance game for final project
 
 # OceanBalance
-(https://game-dev-project-d-a-y.itch.io/ocean-balance)[קישור למשחק]
+[PLAY ON ITCH.IO](https://game-dev-project-d-a-y.itch.io/ocean-balance) 
 #### A game that test your balance ability .
 
 
