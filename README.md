@@ -1,8 +1,8 @@
 
 # FinalProject-OceanBalance    
-## A game that tests your balance ability.
+### A game that tests your balance ability.
      
-### [PLAY ON ITCH.IO](https://game-dev-project-d-a-y.itch.io/ocean-balance) 
+### :video_game: [PLAY ON ITCH.IO](https://game-dev-project-d-a-y.itch.io/ocean-balance) :video_game:
     
     
 ## About the Devlopment of our Game:     
