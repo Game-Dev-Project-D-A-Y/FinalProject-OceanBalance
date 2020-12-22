@@ -3,47 +3,59 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
+/**
+*   Class that manages game events
+*/
 public class GameManager : MonoBehaviour
 {
+    [Tooltip("The object of the surface")]
     [SerializeField]
     GameObject baseObject;
 
+    [Tooltip("Bottle prefab to be respawn")]
     [SerializeField]
     GameObject bottleToSpawn;
 
+    [Tooltip("Black hole prefab to be respawn")]
     [SerializeField]
     GameObject blackHoleToSpawn;
 
+    [Tooltip("Time text field to be edited")]
     [SerializeField]
-    TextMeshPro gameTimeScoreTxt; // object that response on score Dovie
+    TextMeshPro gameTimeScoreTxt; 
 
+    [Tooltip("Bottle timer text field to be edited")]
     [SerializeField]
-    TextMeshPro bottleTimerTxt; // object that response on bottle time Dovie
+    TextMeshPro bottleTimerTxt; 
 
+    [Tooltip("Number of bottle collected text field to be edited")]
     [SerializeField]
-    TextMeshPro BottelsCollectedTxt; // object that response on bottle time Dovie
+    TextMeshPro BottelsCollectedTxt; 
 
+    [Tooltip("Decrease bottle timer when achived given score")]
     [SerializeField]
-    int scoreToReduceTimeBottle; // check score and update time
+    int scoreToReduceTimeBottle; 
 
+    [Tooltip("Maximum time for collecting bottle")]
     [SerializeField]
-    int levelScoreToAdd; // check score and update time
+    float maxTimeToCollectBottle;
 
-    [SerializeField]
-    float minTimeToCollectBottle;
-
+    // Variable that holds the current time left to collect bottle
     private float timeLeftToCollectBottle;
 
+    // Game timer
     private float timeGained; 
 
+    // Indicates whether the game is running
     private bool isActive = true;
 
+    // Number of bottles collected
     private int bottelsCollected = 0; 
 
     // Start is called before the first frame update
     void Start()
     {
-        timeLeftToCollectBottle = minTimeToCollectBottle + 1;
+        timeLeftToCollectBottle = maxTimeToCollectBottle + 1;
         SpawnBottle();
     }
 
@@ -57,6 +69,8 @@ public class GameManager : MonoBehaviour
     }
 
     // PUBLIC METHODS
+
+    // Method thats being called when bottle is picked
     public void OnBottlePicked(GameObject bottle)
     {
         Debug.Log("OnBottlePicked");
@@ -68,6 +82,7 @@ public class GameManager : MonoBehaviour
         CheckAndUpdateBottleTime();
     }
 
+    // Method thats being called when the ball hits the sea
     public void OnBorderHit(GameObject ball)
     {
         Destroy (ball);
@@ -75,6 +90,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("OnBorderHit");
     }
 
+    // Method thats being called when the ball step on a black hole
     public void OnBlackHole(GameObject ball)
     {
         Destroy (ball);
@@ -83,7 +99,9 @@ public class GameManager : MonoBehaviour
     }
 
     // PRIVATE METHODS
-    private void UpdateGameTime() //update time of game
+
+    // Method that updates time of game
+    private void UpdateGameTime() 
     {
         if (isActive)
         {
@@ -92,26 +110,28 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    // Method that checks and updates time left for collecting bottle
     private void CheckAndUpdateBottleTime()
     {
         if (
             bottelsCollected >= scoreToReduceTimeBottle &&
-            minTimeToCollectBottle >= 5
+            maxTimeToCollectBottle >= 5
         )
         {
-            minTimeToCollectBottle -= 1;
+            maxTimeToCollectBottle -= 1;
             scoreToReduceTimeBottle *= 2;
         }
-        timeLeftToCollectBottle = minTimeToCollectBottle;
+        timeLeftToCollectBottle = maxTimeToCollectBottle;
     }
 
+    // Method that sets time left for collecting bottle
     private void BottleTime()
     {
         timeLeftToCollectBottle -= Time.deltaTime;
         bottleTimerTxt.SetText("Bottle Timer\n{0}", (int) timeLeftToCollectBottle);
         if (timeLeftToCollectBottle <= 1)
         {
-            timeLeftToCollectBottle = minTimeToCollectBottle + 1;
+            timeLeftToCollectBottle = maxTimeToCollectBottle + 1;
             GameObject bottleObject = GameObject.Find("BottlePrefab(Clone)");
             Destroy(bottleObject);
             CreateBlackHole(bottleObject);
@@ -119,6 +139,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    // Method that creates new black hole on the uncollected bottle
     private void CreateBlackHole(GameObject bottleObject)
     {
         GameObject newObject = Instantiate(blackHoleToSpawn.gameObject, bottleObject.transform.position, baseObject.transform.localRotation);
@@ -126,6 +147,7 @@ public class GameManager : MonoBehaviour
         newObject.transform.localPosition = new Vector3(newObject.transform.localPosition.x, 0.6f, newObject.transform.localPosition.z);
     }
 
+    // Method that spawns a new bottle
     private void SpawnBottle()
     {
         Debug.Log("SpawnBottle");

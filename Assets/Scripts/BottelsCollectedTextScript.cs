@@ -18,11 +18,13 @@ public class BottelsCollectedTextScript : MonoBehaviour
         textField = GetComponent<TextMeshPro>();
     }
 
+    // Get number of bottles collected
     public int GetBottelsCollected()
     {
         return this.BottelsCollected;
     }
 
+    // Set number of bottles collected
     public void SetBottelsCollected(int newBottelsCollected)
     {
         this.BottelsCollected = newBottelsCollected;
