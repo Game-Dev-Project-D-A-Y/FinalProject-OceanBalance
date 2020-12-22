@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     TextMeshPro BottelsCollectedTxt; // object that response on bottle time Dovie
 
-    int bottelsCollected = -1;   // -1 because in the start of the game the bottle fallls on the ball! please fix alon de loco! ******************************
+    int bottelsCollected = 0;   // -1 because in the start of the game the bottle fallls on the ball! please fix alon de loco! ******************************
     [SerializeField]
     int scoreToreduceTimeBottle; // check score and update time
 

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3190632825487562798}
   - component: {fileID: -8192150194588276998}
   m_Layer: 0
-  m_Name: Bottle
+  m_Name: BottlePrefab
   m_TagString: Bottle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60,6 +60,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5381949d1ae55d64c90f909d729eba8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  baseTransform: {fileID: 0}
 --- !u!1 &4268917333224048644
 GameObject:
   m_ObjectHideFlags: 0
@@ -72,7 +73,7 @@ GameObject:
   - component: {fileID: 7352821822397944809}
   - component: {fileID: 8481899057202099177}
   m_Layer: 0
-  m_Name: Cylinder.002
+  m_Name: BottleLid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -118,7 +119,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2926557707537190794, guid: fa9b995f7a872094aa73996990659f17, type: 3}
+  - {fileID: 2100000, guid: c47f05d3e292d01449315c62005e57b5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -151,7 +152,7 @@ GameObject:
   - component: {fileID: 6590754402725469071}
   - component: {fileID: 1593157379894772907}
   m_Layer: 0
-  m_Name: Cylinder.003
+  m_Name: BottleBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -197,7 +198,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3bc75074ee8ab3549a74d54baadf8f2a, type: 2}
+  - {fileID: 2100000, guid: 07e20563e0d8e5f4a883796b09994ddd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
