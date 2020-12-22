@@ -1,14 +1,12 @@
-<div dir="rtl">
-## FinalProject-OceanBalance
-Balance game for final project
+<div dir="rtl">    
 
-# OceanBalance
-# [PLAY ON ITCH.IO](https://game-dev-project-d-a-y.itch.io/ocean-balance) 
-#### A game that test your balance ability .
+# FinalProject-OceanBalance    
+### A game that tests your balance ability.
+     
+## [PLAY ON ITCH.IO](https://game-dev-project-d-a-y.itch.io/ocean-balance) 
 
-שמנהלת את המשחק יש הערות בקוד לגבי כל התפעול שלו  [GAMEMANAGER](https://github.com/Game-Dev-Project-D-A-Y/OceanBalance/blob/main/Assets/GameManager.cs) החלטנו במשחק הזה לרכז את עיקר המשחק בסקריפט
-
-
+ In our project we created a [GameManager script](https://github.com/Game-Dev-Project-D-A-Y/OceanBalance/blob/main/Assets/GameManager.cs) which through it we control the game.
+ 
 ### נאום מעלית
 
 העולם שלנו מתחיל להיהרס !
