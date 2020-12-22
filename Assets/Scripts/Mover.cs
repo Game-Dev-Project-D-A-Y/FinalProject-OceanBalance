@@ -4,30 +4,20 @@ using UnityEngine;
 /**
  * This component moves a player controlled with a CharacterController using the keyboard.
  */
-public class CharacterKeyBoardMover : MonoBehaviour
+public class Mover : MonoBehaviour
 {
     [Tooltip("Speed of player keyboard-movement, in meters/second")]
     [SerializeField]
     float _speed = 3.5f;
 
     [SerializeField]
-    float _gravity = 9.81f;
-
-    [SerializeField]
     float angle = 20;
-
-    private CharacterController _cc;
 
     private Vector3 velocity;
 
     private float rotationZ;
 
     private float rotationX;
-
-    void Start()
-    {
-        _cc = GetComponent<CharacterController>();
-    }
 
     private float EulerToDegrees(float input)
     {

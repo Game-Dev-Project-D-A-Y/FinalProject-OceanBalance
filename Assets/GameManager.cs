@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     float minTimeToCollectBottle;
 
-    float timeLeftToCollectBottle;
+    private float timeLeftToCollectBottle;
 
     private float timeGained; 
 
@@ -43,7 +43,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        timeLeftToCollectBottle = minTimeToCollectBottle;
+        timeLeftToCollectBottle = minTimeToCollectBottle + 1;
+        SpawnBottle();
     }
 
     // Update is called once per frame
@@ -63,7 +64,7 @@ public class GameManager : MonoBehaviour
         Destroy (bottle);
         bottelsCollected += 1;
         Debug.Log("bottelsCollected:" + bottelsCollected);
-        BottelsCollectedTxt.SetText("Bottles: " + bottelsCollected);
+        BottelsCollectedTxt.SetText("Bottles Collected\n{0}", (int)bottelsCollected);
         CheckAndUpdateBottleTime();
     }
 
@@ -87,7 +88,7 @@ public class GameManager : MonoBehaviour
         if (isActive)
         {
             timeGained += Time.deltaTime;
-            gameTimeScoreTxt.SetText("Time: {0}", timeGained);
+            gameTimeScoreTxt.SetText("Time\n{0}", (int)timeGained);
         }
     }
 
@@ -107,10 +108,10 @@ public class GameManager : MonoBehaviour
     private void BottleTime()
     {
         timeLeftToCollectBottle -= Time.deltaTime;
-        bottleTimerTxt.SetText("Bottle Timer: {0}", timeLeftToCollectBottle);
-        if (timeLeftToCollectBottle <= 0)
+        bottleTimerTxt.SetText("Bottle Timer\n{0}", (int) timeLeftToCollectBottle);
+        if (timeLeftToCollectBottle <= 1)
         {
-            timeLeftToCollectBottle = minTimeToCollectBottle;
+            timeLeftToCollectBottle = minTimeToCollectBottle + 1;
             GameObject bottleObject = GameObject.Find("BottlePrefab(Clone)");
             Destroy(bottleObject);
             CreateBlackHole(bottleObject);
