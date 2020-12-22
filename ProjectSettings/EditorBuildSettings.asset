@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/StartGameWindow.unity
+    guid: da1da9f4b6b5f2f40a9bb46d220eaca3
+  - enabled: 1
+    path: Assets/Scenes/SaveTheSea.unity
+    guid: 8660516bfe8512247b68951e5b31ed6a
+  - enabled: 1
+    path: Assets/Scenes/Instructions.unity
+    guid: aa0fb9e57f502864d9ba5e283cb7782c
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}
