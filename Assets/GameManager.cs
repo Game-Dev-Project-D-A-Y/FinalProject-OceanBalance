@@ -84,8 +84,7 @@ public class GameManager : MonoBehaviour
         {
             timeLeftToCollectBottle = minTimeToCollectBottle;
 
-            //bottleToDestroy = bottleToDestroy.FindWithTag("Bottle");
-            Destroy(GameObject.Find("Bottle(Clone)"));
+            Destroy(GameObject.Find("BottlePrefab(Clone)"));
             SpawnBottle();
         }
     }
