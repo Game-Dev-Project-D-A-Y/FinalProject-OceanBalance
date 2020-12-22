@@ -1,4 +1,3 @@
-<div dir="rtl">    
 
 # FinalProject-OceanBalance    
 ### A game that tests your balance ability.
@@ -7,6 +6,8 @@
 
  In our project we created a [GameManager script](https://github.com/Game-Dev-Project-D-A-Y/OceanBalance/blob/main/Assets/GameManager.cs) which through it we control the game.
  
+<div dir="rtl">    
+
 ### נאום מעלית
 
 העולם שלנו מתחיל להיהרס !
