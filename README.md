@@ -24,6 +24,10 @@ The pointes, timer and amount of bottles collected are also controlled in this s
 To deisgn the sea under the base, we used a Shader. If you are no fammiliar with the unity Shader you may watch this video on [YouTube: Water Shader](https://www.youtube.com/watch?v=Vg0L9aCRWPE&t=302s).   
 
 <img src= https://github.com/Game-Dev-Project-D-A-Y/OceanBalance/blob/main/Images/sea.jpg width="300" height="150"/>
+    
+    
+## So What are you waiting for? Go Save our Sea Friends    
+<img src= https://github.com/Game-Dev-Project-D-A-Y/OceanBalance/blob/main/Images/save%20the%20sea.jpg width="520" />
 
  
 <div dir="rtl">    
