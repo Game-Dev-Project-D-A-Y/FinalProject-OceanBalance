@@ -90,8 +90,7 @@ public class GameManager : MonoBehaviour
         Destroy (ball);
         isActive = false;
         Debug.Log("OnBorderHit");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-
+        LoadCurrnetScene();
     }
 
     // Method thats being called when the ball step on a black hole
@@ -100,6 +99,7 @@ public class GameManager : MonoBehaviour
         Destroy (ball);
         isActive = false;
         Debug.Log("OnBlackHole");
+        LoadCurrnetScene();
     }
 
     // PRIVATE METHODS
@@ -165,5 +165,9 @@ public class GameManager : MonoBehaviour
         GameObject newObject = Instantiate(bottleToSpawn.gameObject, randomPosition, baseObject.transform.localRotation);
         newObject.transform.parent = baseObject.transform;
         newObject.transform.localPosition = new Vector3(newObject.transform.localPosition.x, 0, newObject.transform.localPosition.z);
+    }
+    private void LoadCurrnetScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
