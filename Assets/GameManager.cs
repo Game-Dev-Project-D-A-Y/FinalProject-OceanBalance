@@ -110,7 +110,7 @@ public class GameManager : MonoBehaviour
         if (isActive)
         {
             timeGained += Time.deltaTime;
-            gameTimeScoreTxt.SetText("Time\n{0}", (int)timeGained);
+            gameTimeScoreTxt.SetText("Score\n{0}", (int)timeGained);
         }
     }
 
@@ -164,7 +164,7 @@ public class GameManager : MonoBehaviour
 
         GameObject newObject = Instantiate(bottleToSpawn.gameObject, randomPosition, baseObject.transform.localRotation);
         newObject.transform.parent = baseObject.transform;
-        newObject.transform.localPosition = new Vector3(newObject.transform.localPosition.x, 0, newObject.transform.localPosition.z);
+        newObject.transform.localPosition = new Vector3(newObject.transform.localPosition.x, 0.3f, newObject.transform.localPosition.z);
     }
     private void LoadCurrnetScene()
     {
