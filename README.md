@@ -1,13 +1,36 @@
-<div dir="rtl">
-## FinalProject-OceanBalance
-Balance game for final project
 
-# OceanBalance
-# [PLAY ON ITCH.IO](https://game-dev-project-d-a-y.itch.io/ocean-balance) 
-#### A game that test your balance ability .
+# FinalProject-OceanBalance    
+### A game that tests your balance ability.
+     
+### :video_game: [PLAY ON ITCH.IO](https://game-dev-project-d-a-y.itch.io/ocean-balance) :video_game:
+    
+    
+## About the Devlopment of our Game:     
 
-שמנהלת את המשחק יש הערות בקוד לגבי כל התפעול שלו  [GAMEMANAGER](https://github.com/Game-Dev-Project-D-A-Y/OceanBalance/blob/main/Assets/GameManager.cs) החלטנו במשחק הזה לרכז את עיקר המשחק בסקריפט
+### Main Elements of the game  
+<img src= https://github.com/Game-Dev-Project-D-A-Y/OceanBalance/blob/main/base.jpg width="400" height="200"/>
+   
+**Ball** - Has a RigidBody component which allows it to roll around the surface and a [BallScript script](https://github.com/Game-Dev-Project-D-A-Y/OceanBalance/blob/main/Assets/Scripts/BallScript.cs) which sends to the GameManager commands as soon as it colides with a bottle/whole/border.   
+ 
+**Base** - The surface of the game which is controled by the [Mover Script](https://github.com/Game-Dev-Project-D-A-Y/OceanBalance/blob/main/Assets/Scripts/Mover.cs)
+    
+**Bottle** - Every N seconds it appears on the surface and disappears when the ball coliides with it or when it times out (every bottle has a few seconds to be touched and when a player does not make it, a **black hole** appears instead of the bottle and the player should **Not** touch the hole with the ball.   
 
+### GameManager
+In our project we created a [GameManager script](https://github.com/Game-Dev-Project-D-A-Y/OceanBalance/blob/main/Assets/GameManager.cs) which through it we control the game.
+The pointes, timer and amount of bottles collected are also controlled in this script and all of three have the Text Mesh Pro component.
+
+### Design    
+To deisgn the sea under the base, we used a Shader. If you are no fammiliar with the unity Shader you may watch this video on [YouTube: Water Shader](https://www.youtube.com/watch?v=Vg0L9aCRWPE&t=302s).   
+
+<img src= https://github.com/Game-Dev-Project-D-A-Y/OceanBalance/blob/main/Images/sea.jpg width="300" height="150"/>
+    
+    
+## So What are you waiting for? Go Save our Sea Friends    
+<img src= https://github.com/Game-Dev-Project-D-A-Y/OceanBalance/blob/main/Images/save%20the%20sea.jpg width="520" />
+
+ 
+<div dir="rtl">    
 
 ### נאום מעלית
 
