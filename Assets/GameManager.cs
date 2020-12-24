@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 /**
 *   Class that manages game events
@@ -88,6 +90,8 @@ public class GameManager : MonoBehaviour
         Destroy (ball);
         isActive = false;
         Debug.Log("OnBorderHit");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
     }
 
     // Method thats being called when the ball step on a black hole
