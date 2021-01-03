@@ -66,7 +66,7 @@ public class GameManager : MonoBehaviour
     {
         if (!isActive) return;
 
-        UpdateGameTime();
+       // UpdateGameTime();
         BottleTime();
     }
 
@@ -80,7 +80,7 @@ public class GameManager : MonoBehaviour
         Destroy (bottle);
         bottelsCollected += 1;
         Debug.Log("bottelsCollected:" + bottelsCollected);
-        BottelsCollectedTxt.SetText("Bottles Collected\n{0}", (int)bottelsCollected);
+        BottelsCollectedTxt.SetText("Score\n{0}", (int)bottelsCollected);
         CheckAndUpdateBottleTime();
     }
 
